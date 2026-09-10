@@ -1,0 +1,12 @@
+dlt[duckdb]
+dbt-duckdb
+dagster
+dagster-dbt
+dagster-webserver
+pandas
+pydantic
+requests
+pyarrow
+openpyxl
+plotly
+streamlit

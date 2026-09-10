@@ -1,0 +1,24 @@
+# Python & Environment
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.env
+
+# Raw data & Warehouse binaries (kept local / generated on run)
+data/*.csv
+data/*.duckdb
+.dlt/
+
+# dbt build targets & packages
+dbt_ecom/target/
+dbt_ecom/dbt_packages/
+dbt_ecom/logs/
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

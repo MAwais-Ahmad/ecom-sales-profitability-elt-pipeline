@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ecom_analytics_app:
+    build: .
+    container_name: ecom_sales_pipeline_app
+    ports:
+      - "8501:8501"  # Streamlit Dashboard URL: http://localhost:8501
+      - "3000:3000"  # Dagster Asset UI URL: http://localhost:3000
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

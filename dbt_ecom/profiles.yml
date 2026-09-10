@@ -1,0 +1,7 @@
+dbt_ecom:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'd:/Projects/data_automation_elt_pipeline/data/data_warehouse.duckdb'
+      schema: main
