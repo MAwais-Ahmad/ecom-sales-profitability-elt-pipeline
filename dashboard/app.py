@@ -17,7 +17,13 @@ DB_PATH = os.path.join(BASE_DIR, "data", "data_warehouse.duckdb")
 @st.cache_data(ttl=600)
 def load_data():
     if not os.path.exists(DB_PATH):
+        with st.spinner("⏳ First-time setup: Ingesting dataset and executing dbt ELT pipeline..."):
+            import subprocess
+            subprocess.run(["python", os.path.join(BASE_DIR, "run_pipeline.py")], check=True)
+    
+    if not os.path.exists(DB_PATH):
         return None, None, None, None
+
     con = duckdb.connect(DB_PATH, read_only=True)
     fct_daily = con.execute("SELECT * FROM fct_daily_sales").df()
     mart_cat = con.execute("SELECT * FROM mart_category_profitability").df()
