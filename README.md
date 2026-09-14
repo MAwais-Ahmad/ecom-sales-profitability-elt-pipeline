@@ -1,5 +1,11 @@
 # 🛍️ Small Business E-Commerce Sales & Profitability Pipeline (ELT)
 
+[![Live Streamlit Demo](https://img.shields.io/badge/Live%20Dashboard-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://ecom-sales-profitability.streamlit.app)
+[![dbt Engine](https://img.shields.io/badge/dbt-DuckDB-FF694B?style=for-the-badge&logo=dbt&logoColor=white)](https://www.getdbt.com/)
+[![Dagster](https://img.shields.io/badge/Orchestration-Dagster-4F46E5?style=for-the-badge&logo=dagster&logoColor=white)](https://dagster.io/)
+
+> 🚀 **Live Interactive Web App**: [https://ecom-sales-profitability.streamlit.app](https://ecom-sales-profitability.streamlit.app)
+
 An end-to-end Data Engineering pipeline and executive BI dashboard built on the **Modern Data Stack** (`dlt`, `DuckDB`, `dbt`, `Dagster`, `Streamlit`, `Docker`). 
 
 Processes real-world e-commerce transaction data (~540,000 order records) to generate business insights around top-line revenue, category profit margins, product rank volume gaps, and actionable low-performer risk alerts.
