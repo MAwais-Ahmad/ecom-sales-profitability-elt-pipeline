@@ -11,6 +11,7 @@ INGESTION_SCRIPT = os.path.join(BASE_DIR, "ingestion", "raw_retail_pipeline.py")
 DOWNLOAD_SCRIPT = os.path.join(DATA_DIR, "download_raw_data.py")
 
 def main():
+    os.environ["DUCKDB_PATH"] = DB_PATH
     print("=" * 70)
     print("      E-COMMERCE SALES & PROFITABILITY PIPELINE EXECUTION ENGINE     ")
     print("=" * 70)

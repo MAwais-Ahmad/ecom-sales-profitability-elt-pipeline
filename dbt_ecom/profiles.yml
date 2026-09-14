@@ -3,5 +3,5 @@ dbt_ecom:
   outputs:
     dev:
       type: duckdb
-      path: 'd:/Projects/data_automation_elt_pipeline/data/data_warehouse.duckdb'
+      path: "{{ env_var('DUCKDB_PATH', '../data/data_warehouse.duckdb') }}"
       schema: main
