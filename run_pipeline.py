@@ -25,8 +25,12 @@ def main():
     
     # 3. Run dbt Transformations
     print("\n[STEP 3/4] Running dbt Analytical Transformation Models...")
-    dbt_cmd = ["dbt", "run", "--project-dir", DBT_DIR, "--profiles-dir", DBT_DIR]
-    subprocess.run(dbt_cmd, check=True)
+    dbt_cmd = [sys.executable, "-m", "dbt.cli.main", "run", "--project-dir", DBT_DIR, "--profiles-dir", DBT_DIR]
+    try:
+        subprocess.run(dbt_cmd, check=True)
+    except Exception:
+        dbt_cmd = [sys.executable, "-m", "dbt", "run", "--project-dir", DBT_DIR, "--profiles-dir", DBT_DIR]
+        subprocess.run(dbt_cmd, check=True)
     
     # 4. Pipeline Verification & Data Quality Checks
     print("\n[STEP 4/4] Verifying Analytical Data Marts in DuckDB Warehouse...")

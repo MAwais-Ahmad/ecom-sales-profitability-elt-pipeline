@@ -18,8 +18,9 @@ DB_PATH = os.path.join(BASE_DIR, "data", "data_warehouse.duckdb")
 def load_data():
     if not os.path.exists(DB_PATH):
         with st.spinner("⏳ First-time setup: Ingesting dataset and executing dbt ELT pipeline..."):
+            import sys
             import subprocess
-            subprocess.run(["python", os.path.join(BASE_DIR, "run_pipeline.py")], check=True)
+            subprocess.run([sys.executable, os.path.join(BASE_DIR, "run_pipeline.py")], check=True)
     
     if not os.path.exists(DB_PATH):
         return None, None, None, None
