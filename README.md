@@ -4,11 +4,31 @@
 [![dbt Engine](https://img.shields.io/badge/dbt-DuckDB-FF694B?style=for-the-badge&logo=dbt&logoColor=white)](https://www.getdbt.com/)
 [![Dagster](https://img.shields.io/badge/Orchestration-Dagster-4F46E5?style=for-the-badge&logo=dagster&logoColor=white)](https://dagster.io/)
 
-> 🚀 **Live Interactive Web App**: [https://ecom-sales-profitability.streamlit.app](https://ecom-sales-profitability.streamlit.app)
+> 🚀 **Live Interactive Web App**: [https://ecom-sales-profitability.streamlit.app](https://ecom-sales-profitability.streamlit.app)  
+> ⏱️ **Note on Free-Tier Hosting**: *Hosted on Streamlit Community Cloud (Free Tier). If the container has been idle, it may take ~45–60 seconds to spin up on first click. For immediate review without waiting, high-resolution preview screenshots are provided below.*
 
 An end-to-end Data Engineering pipeline and executive BI dashboard built on the **Modern Data Stack** (`dlt`, `DuckDB`, `dbt`, `Dagster`, `Streamlit`, `Docker`). 
 
 Processes real-world e-commerce transaction data (~540,000 order records) to generate business insights around top-line revenue, category profit margins, product rank volume gaps, and actionable low-performer risk alerts.
+
+---
+
+## 📸 Executive Dashboard Previews
+
+![Executive E-Commerce Sales & Profitability Dashboard Overview](docs/images/ecom_dashboard_overview.png)
+*Fig 1: Executive KPI suite ($10.67M Revenue, $1.16M Net Gross Profit, 10.9% Margin), Revenue vs. COGS Trends, and Category Margin % Breakdown.*
+
+<details>
+<summary>📊 <b>Click to view Best Seller Volume Gap & Low-Performer Risk Alerts</b></summary>
+<br>
+
+![Best Seller Volume Gap and Low-Performer Alerts](docs/images/ecom_dashboard_charts.png)
+*Fig 2: Top 10 Best Sellers Revenue vs. Volume Gap analysis and automated inventory risk alert table.*
+
+![Full Dashboard View](docs/images/ecom_dashboard_full.png)
+*Fig 3: Complete scroll view of analytics dashboard.*
+
+</details>
 
 ---
 
